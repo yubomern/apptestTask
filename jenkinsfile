@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'test', url: 'https://gitlab.com/ubi_soft/tasktestpython.git'
+                git branch: 'test', url: 'https://github.com/yubomern/apptestTask.git'
             }
         }
         stage('Run Scheduler') {
