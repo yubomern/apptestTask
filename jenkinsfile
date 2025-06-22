@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'test', url: 'https://gitlab.com/ubi_soft/tasktestpython.git'
+            }
+        }
+        stage('Run Scheduler') {
+            steps {
+                bat 'powershell -ExecutionPolicy Bypass -File runner.ps1'
+            }
+        }
+        stage('Archive Logs') {
+            steps {
+                archiveArtifacts artifacts: 'error_log.txt', allowEmptyArchive: true
+            }
+        }
+    }
+}
+

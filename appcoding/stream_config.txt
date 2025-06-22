@@ -1,0 +1,15 @@
+stream1=http://sip1.egaletcp.net/download/norecnolive.mp4
+stream2=http://sip1.egaletcp.net/download/norecnolive.mp4
+audio_stream=/home/ayoub/validation/test.mp3
+interval=36000
+text=000000
+color=0x88ff2200
+port=8552
+latency=10
+m=http://sip1.egaletcp.net/download/norec.mp4
+m2=http://sip1.egaletcp.net/download/norecnolive.mp4
+flag_session=1
+text_overlay=Welcome!
+username=admin
+password=secret
+mount=/stream1
